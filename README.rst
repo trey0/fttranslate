@@ -47,9 +47,11 @@ I) At the location of disaster, local groups are creating maps highlighting impo
 
 User
 
-Opens the map; it is visible in the local language
-Has an affordance available to view the map in a different language, and chooses a language of his choice
-Sees the map content in a language he understands
+1) Opens the map; it is visible in the local language
+
+2) Has an affordance available to view the map in a different language, and chooses a language of his choice
+
+3) Sees the map content in a language he understands
 
 
 
