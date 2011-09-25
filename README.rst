@@ -11,4 +11,12 @@ FT == Fusion Table
 
 2) The translation mechanism is done using the human language translation service TranService(Slang,Tlang)
 
+3) In the initial version, we will writeback the translated text into a fusion table. This fusion table will then be used to visualize the map in the new language.
+
+
+User-Interface
+
+1) There will be an affordance for the user at the map visualization level to specify the language s/he wants to view the map in.
+2) There will be another affordance to initiate the translation process.
+
 
