@@ -1,5 +1,27 @@
 FTTranslate: A translation tool experiment for Google Fusion Tables
 
+Alpha software!
+
+Quick resources and developer tips:
+
+ * Live app is at http://ft-translate.appspot.com/
+
+ * GitHub project page is https://github.com/trey0/fttranslate
+
+ * Git sample::
+
+     # initial checkout
+     git clone git@github.com:trey0/fttranslate.git
+     cd fttranslate
+     
+     # pulling somebody else's update
+     git pull origin master
+     
+     # pushing your changes
+     git add changedfile.txt
+     git commit -m 'made changes'
+     git push origin master
+
 Requirements:
 FT == Fusion Table
 
