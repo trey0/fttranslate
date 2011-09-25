@@ -88,3 +88,5 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.contenttypes',
 )
+
+from local_settings import *
