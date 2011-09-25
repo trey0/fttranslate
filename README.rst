@@ -41,4 +41,15 @@ User-Interface
 1) There will be an affordance for the user at the map visualization level to specify the language s/he wants to view the map in.
 2) There will be another affordance to initiate the translation process.
 
+Use Cases for FT Translator / FT-翻訳家のユースケース
+
+I) At the location of disaster, local groups are creating maps highlighting important locations/entities. The maps are based on fusion tables consisting of geographical data (cities, prefectures, street names) and building names (hospitals, train stations, shops etc.), in local language. International rescue teams have arrived in the affected area, and would like to use these community-generated maps to aid their efforts. However in order to do this, they need to understand the content shown in the maps.
+
+User
+
+Opens the map; it is visible in the local language
+Has an affordance available to view the map in a different language, and chooses a language of his choice
+Sees the map content in a language he understands
+
+
 
