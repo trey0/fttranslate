@@ -3,3 +3,4 @@
 
 USERNAME = '...'
 PASSWORD = '...'
+GOOGLE_TRANSLATE_API_KEY='...'
