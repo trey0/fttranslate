@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- encoding: utf-8 -*-
 
 import re
 import sys
@@ -31,8 +32,10 @@ def translate(text,src='', to='en'):
     for text in getSplits(text):
         print 'text:', text
         url = TRANSLATE_BASE_URL + '?' + urllib.urlencode(params) + '&q=' + text
-        print 'url:', url
-        rawResponse = urllib.urlopen(url).read()
+        print 'url:', repr(url)
+        print 'type(url):', type(url)
+        urlNet = url.encode('utf-8')
+        rawResponse = urllib.urlopen(urlNet).read()
         print 'response:', rawResponse
         resp = json.loads(rawResponse)
         try:

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import os
 import sys
@@ -21,14 +22,30 @@ token = ClientLogin().authorize(settings.USERNAME, settings.PASSWORD)
 ft_client = ftclient.ClientLoginFTClient(token)
 
 tableid = 575705
-srcLanguage = 'ja'
+newTableConfig = {
+    'tablename': {
+    'address_japanese':'LOCATION',
+    'address_english':'STRING'
+    }
+    }
 
-resultText = ft_client.query('select * from %s limit 2' % tableid)
+#newTableId = ft_client.query(SQL().createTable(newTableConfig)).split("\n")[1]
+newTableId = 1614172
+
+print 'newTableId:', newTableId
+resultText = ft_client.query('SELECT * FROM %s LIMIT 1' % tableid)
 print 'sql result:', resultText
-rows = StringIO(resultText)
+resultUnicode = unicode(resultText, encoding='utf-8')
+rows = StringIO(resultUnicode)
 rows.readline() # discard header
 for row in rows:
     row = row[:-1]
     fields = row.split(',')
     print fields
-    print translate(fields[0])
+    jploc = fields[0]
+    enloc = translate(jploc, u'ja')
+    print 'enloc:', enloc
+    ftResponse = ft_client.query(u"INSERT INTO %s ('address_japanese', 'address_english') VALUES ('%s', '%s')"
+                                 % (newTableId, jploc, enloc))
+    rowid = int(ftResponse.split("\n")[1])
+    print 'Inserted %d' % rowid
