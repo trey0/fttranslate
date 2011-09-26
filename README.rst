@@ -2,6 +2,15 @@ FTTranslate: A translation tool experiment for Google Fusion Tables
 
 Alpha software!
 
+Installation::
+
+  git clone git@github.com:trey0/fttranslate.git
+  cd fttranslate
+  cp local_settings_template.py local_settings.py
+  # put your fusion tables username/password and your api key for google
+  # translate into local_settings.py
+  python test.py
+
 Quick resources and developer tips:
 
  * Live app is at http://ft-translate.appspot.com/
